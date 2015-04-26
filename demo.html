@@ -1,0 +1,31 @@
+<!--
+Demo of Stopwatch.js functionality.
+
+Author: Kip Robinson  https://github.com/kiprobinson
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Shopwatch.js Demo</title>
+  </head>
+  <body>
+    <h1>Stopwatch.js Demo</h1>
+    
+    <!-- The element to be updated by the stopwatch library. -->
+    <div id="stopwatchDisplay"></div>
+    
+    <button id="start" onclick="stopwatch.start()">Start</button>
+    <button id="pause" onclick="stopwatch.pause()">Pause</button>
+    <button id="toggle" onclick="stopwatch.toggle()">Toggle</button>
+    <button id="reset" onclick="stopwatch.reset()">Reset</button>
+    <button id="restart" onclick="stopwatch.restart()">Restart</button>
+  </body>
+  
+  <script type="text/javascript" src="stopwatch.js"></script>
+  <script>
+    //Create the stopwatch object. Using global scope for demo, but ideally you would put it in a more localized scope.
+    //Also, for demo purposes this code 
+    stopwatch = new Stopwatch(document.getElementById('stopwatchDisplay'));
+  </script>
+</html>
