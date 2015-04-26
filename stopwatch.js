@@ -15,6 +15,18 @@ Stopwatch = function(_updateEl) {
 };
 
 /**
+ * Adds time to the stopwatch.
+ * 
+ * @param  ms   Time to add, in milliseconds.
+ * @return this
+ */
+Stopwatch.prototype.add = function(ms) {
+  this.elapsedTime += Math.max(ms, 0);
+  
+  return this.draw();
+};
+
+/**
  * Draws the current time, if an update element was passed during constructor. Usually you shouldn't need to call this directly.
  * 
  * @return this
